@@ -1,6 +1,6 @@
 # DayPlanner-Bootcamp
 
-Time management plays an important role in the life of a Web Developer  professional. As a person with a very busy schedule I decided to build this daily planner to help me keep on track with my daily tasks. It's an application built with HTML, CSS and Jquery . The texts areas change color according to the time of the day.
+Time management plays an important role in the life of a Web Developer. As a person with a very busy schedule I decided to build this daily planner to help me keep on track with my daily tasks. It's an application built with HTML, CSS and Jquery . The texts areas change color according to the time of the day.
 
 
 #Acceptance Criteria
