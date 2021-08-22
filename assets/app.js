@@ -18,7 +18,7 @@ if (!savePlan == null) {
   myPlan = savePlan;
 }
 
-//Using 'for loop' and JQuery to create the time blocks 
+//Using 'for loop' and JQuery to create the time blocks
 //I'm setting the business hours starting 8 am till 5 pm
 for (e = 8; e < 18; e++) {
   let form = $("<form>");
@@ -64,7 +64,7 @@ for (e = 8; e < 18; e++) {
   saveIcon.addClass("fas fa-check");
 
   var saveButton = $("<button>");
-  saveButton.addClass("button is-primary is-rounded");
+  saveButton.addClass("save button is-primary is-rounded");
   saveButton.text("Save");
   saveButton.append(saveIcon);
   form.append(saveButton);
@@ -73,21 +73,20 @@ for (e = 8; e < 18; e++) {
   deleteIcon.addClass("fas fa-times");
 
   var deleteButton = $("<button>");
-  deleteButton.addClass("button is-danger is-rounded");
+  deleteButton.addClass("button is-danger is-rounded dlt");
   deleteButton.text("Delete");
   deleteButton.append(deleteIcon);
   form.append(deleteButton);
 }
 //Create event listener to 'Save' or 'Delete' from local storage
 
-saveButton.on("click", function (event) {
+$(".save button").on("click", function (event) {
   event.preventDefault();
   index = $(this).parent().attr("index");
   userInput = $(this).prev().val();
   myPlan[index] = userInput;
   localStorage.setItem("userInput", JSON.stringify(myPlan));
 });
-deleteButton.on('click', function(){
-  deleteButton.parentNode.removeChild(userInput)
-
-})
+$(".dlt").on("click", function () {
+  $(".dlt").parentNode.removeChild(userInput);
+});

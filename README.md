@@ -1,9 +1,9 @@
 # DayPlanner-Bootcamp
 
-Time management plays an important role in the life of a Web Developer. As a person with a very busy schedule I decided to build this daily planner to help me keep on track with my daily tasks. It's an application built with HTML, CSS and Jquery . The texts areas change color according to the time of the day.
+In this project I was 
 
 
-#Acceptance Criteria
+# Acceptance Criteria
 
 GIVEN I am using a daily planner to create a schedule
 
@@ -32,13 +32,12 @@ WHEN I refresh the page
 THEN the saved events persist
 
 
-#Screen:
+#Mock-up:
 
 
-![Screen Shot 2021-07-28 at 7 10 26 pm](https://user-images.githubusercontent.com/84433857/127296551-b92f713c-488a-45c3-bf7e-909b7271a54f.png)
 
 ### Technologies-Libraries
-- [Bootstrap](https://getbootstrap.com/) - CSS Framework
+- [Bulma](https://bulma.io/) - CSS Framework
 - [Jquery](https://jquery.com/) - JavaScript Library 
 - [Moment.js](https://momentjs.com/) - JavaScript Library 
 
