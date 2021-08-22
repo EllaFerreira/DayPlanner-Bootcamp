@@ -80,13 +80,16 @@ for (e = 8; e < 18; e++) {
 }
 //Create event listener to 'Save' or 'Delete' from local storage
 
-$(".save button").on("click", function (event) {
+$(".save").on("click", function (event) {
   event.preventDefault();
   index = $(this).parent().attr("index");
   userInput = $(this).prev().val();
   myPlan[index] = userInput;
   localStorage.setItem("userInput", JSON.stringify(myPlan));
 });
-$(".dlt").on("click", function () {
-  $(".dlt").parentNode.removeChild(userInput);
+$(".dlt").on("click", function (event) {
+  event.preventDefault();
+  userInput.remove();
+  // $(".dlt").parentNode.removeChild(userInput);
+  console.log("click");
 });
