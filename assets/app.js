@@ -24,7 +24,7 @@ for (e = 8; e < 18; e++) {
   let form = $("<form>");
   form.attr({
     time: e,
-    id: "row-" + e,
+    id: "each" + e,
     index: e - 8,
   });
   form.addClass("field");
@@ -84,11 +84,13 @@ $(".save").on("click", function (event) {
   event.preventDefault();
   index = $(this).parent().attr("index");
   userInput = $(this).prev().val();
-  userInput = myPlan[index];
+  myPlan[index] = userInput;
   localStorage.setItem("userInput", JSON.stringify(myPlan));
 });
 $(".dlt").on("click", function (event) {
   event.preventDefault();
+  // $("#clearText").val("");
   // $(this).toggleClass(".dlt");
-  if ($(".dlt").hasClass(".dlt")) $(this).remove(userInput);
+  // if ($(".dlt").hasClass(".dlt")) $(this).remove(userInput.text);
+  // console.log("click");
 });
