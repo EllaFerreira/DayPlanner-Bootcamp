@@ -2,7 +2,7 @@
   line-height: 1.5;
 }
 html {
-  background-color: #efe9ae;
+  background-color: #e5e5e5;
 }
 .cover {
   background-image: url(./midia/pineapple.jpg);
@@ -35,51 +35,19 @@ input {
   display: flex;
   border-radius: 30px;
 }
-.saveButton,
-.deleteButton {
-  height: 3.5em;
-  border-radius: 30px;
-  padding: 7px;
-  margin: auto;
-}
+
 .title {
   background-size: cover;
   box-shadow: 2px black;
   color: #ffbc42;
 }
-blockquote,
-body,
-dd,
-dl,
-dt,
-fieldset,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-html,
-iframe,
-legend,
-li,
-ol,
-p,
-pre,
-textarea,
-ul {
-  margin: 20px;
-  padding: 5px;
-}
+
 .present {
   background-color: #fcefb4;
 }
 .past {
-  background-color: #f73c3d;
+  background-color: #fcd5ce;
 }
 .future {
-  background-color: #aaf683;
+  background-color: #d8e2dc;
 }
-

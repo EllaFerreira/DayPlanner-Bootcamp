@@ -25,7 +25,7 @@ for (e = 8; e < 18; e++) {
   form.attr({
     time: e,
     id: "row-" + e,
-    index: e - 9,
+    index: e - 8,
   });
   form.addClass("field");
   $(".container").append(form);
@@ -50,11 +50,11 @@ for (e = 8; e < 18; e++) {
     inputElement.val(savePlan[e - 8]);
   }
   if (currentHour == e) {
-    inputElement.add("present");
+    inputElement.addClass("present");
   } else if (currentHour > e) {
-    inputElement.add("past");
+    inputElement.addClass("past");
   } else {
-    inputElement.add("future");
+    inputElement.addClass("future");
   }
   form.append(inputElement);
 
@@ -84,12 +84,11 @@ $(".save").on("click", function (event) {
   event.preventDefault();
   index = $(this).parent().attr("index");
   userInput = $(this).prev().val();
-  myPlan[index] = userInput;
+  userInput = myPlan[index];
   localStorage.setItem("userInput", JSON.stringify(myPlan));
 });
 $(".dlt").on("click", function (event) {
   event.preventDefault();
-  userInput.remove();
-  // $(".dlt").parentNode.removeChild(userInput);
-  console.log("click");
+  // $(this).toggleClass(".dlt");
+  if ($(".dlt").hasClass(".dlt")) $(this).remove(userInput);
 });
