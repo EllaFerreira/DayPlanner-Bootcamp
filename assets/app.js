@@ -14,7 +14,8 @@ currentTime();
 let myPlan = [];
 let savePlan = JSON.parse(localStorage.getItem("userInput"));
 
-if (!savePlan == null) {
+// goal: if savePlan is not null then we want to set savePlan to myPlan for later use
+if (savePlan !== null) {
   myPlan = savePlan;
 }
 
@@ -59,38 +60,38 @@ for (e = 8; e < 18; e++) {
   form.append(inputElement);
 
   //Creating 'Save' and 'Delete' btn
+  //Create event listener to 'Save' or 'Delete' from local storage
 
   let saveIcon = $("<i>");
   saveIcon.addClass("fas fa-check");
 
-  var saveButton = $("<button>");
+  let saveButton = $("<button>");
   saveButton.addClass("save button is-primary is-rounded");
   saveButton.text("Save");
   saveButton.append(saveIcon);
   form.append(saveButton);
 
+  $(saveButton).on("click", function (event) {
+    event.preventDefault();
+    index = $(this).parent().attr("index");
+    userInput = $(this).prev().val();
+    myPlan[index] = userInput;
+    localStorage.setItem("userInput", JSON.stringify(myPlan));
+  });
+
   let deleteIcon = $("<i>");
   deleteIcon.addClass("fas fa-times");
 
-  var deleteButton = $("<button>");
+  let deleteButton = $("<button>");
   deleteButton.addClass("button is-danger is-rounded dlt");
   deleteButton.text("Delete");
   deleteButton.append(deleteIcon);
+
+  $(deleteButton).on("click", function (event) {
+    event.preventDefault();
+    $(inputElement).val("");
+    localStorage.clear();
+  });
+
   form.append(deleteButton);
 }
-//Create event listener to 'Save' or 'Delete' from local storage
-
-$(".save").on("click", function (event) {
-  event.preventDefault();
-  index = $(this).parent().attr("index");
-  userInput = $(this).prev().val();
-  myPlan[index] = userInput;
-  localStorage.setItem("userInput", JSON.stringify(myPlan));
-});
-$(".dlt").on("click", function (event) {
-  event.preventDefault();
-  // $("#clearText").val("");
-  // $(this).toggleClass(".dlt");
-  // if ($(".dlt").hasClass(".dlt")) $(this).remove(userInput.text);
-  // console.log("click");
-});
