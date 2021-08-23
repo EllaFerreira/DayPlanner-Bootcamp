@@ -26,6 +26,9 @@ In this project I had the opportunity to put JSON and parse into practice; Using
 
 # Mock-up:
 
+<img width="1440" alt="Screen Shot 2021-08-23 at 4 04 58 pm" src="https://user-images.githubusercontent.com/84433857/130398304-706088b7-e288-4184-9671-c9a56353a0f3.png">
+<img width="1440" alt="Screen Shot 2021-08-23 at 4 05 11 pm" src="https://user-images.githubusercontent.com/84433857/130398326-eddc9bb1-a81d-4fbc-8cbf-a257461ea524.png">
+
 
 
 # Technologies-Libraries and sources
