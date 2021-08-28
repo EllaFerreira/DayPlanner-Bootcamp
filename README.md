@@ -31,7 +31,7 @@ In this project I had the opportunity to put JSON and parse into practice; Using
 
 
 
-# Technologies-Libraries and sources
+# Technologies/Libraries 
 
 - [Bulma](https://bulma.io/) - CSS Framework
 - [Jquery](https://jquery.com/) - JavaScript Library 
